@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             options.dsn = "https://62340e8b48bd40dbb4382e0d92ad3385@sentry.io/5175254"
             options.debug = true // Enabled debug when first installing is always helpful
             options.environment = "Production"
-            options.enableAutoPerformanceTracking = true
+            options.enableAutoPerformanceTracing = true
             options.tracesSampleRate = 1.0
             options.onCrashedLastRun = { event in
                 

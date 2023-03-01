@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         let crumb = Breadcrumb()
         crumb.message = "User clicked the button - Capture Message"
         crumb.level = SentryLevel.info
-        SentrySDK.addBreadcrumb(crumb: crumb)
+        SentrySDK.addBreadcrumb(crumb)
         
         let eventId = SentrySDK.capture(message: "Capture this message")
         let userFeedback = UserFeedback(eventId: eventId)
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         let crumb = Breadcrumb()
         crumb.message = "User clicked the button - Crash Application"
         crumb.level = SentryLevel.info
-        SentrySDK.addBreadcrumb(crumb: crumb)
+        SentrySDK.addBreadcrumb(crumb)
         
         SentrySDK.crash()
     }
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         let crumb = Breadcrumb()
         crumb.message = "User clicked the button - Handled Exception"
         crumb.level = SentryLevel.info
-        SentrySDK.addBreadcrumb(crumb: crumb)
+        SentrySDK.addBreadcrumb(crumb)
         
         do {
             try callMehtodThatThrowsError()
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         let crumb = Breadcrumb()
         crumb.message = "User clicked the button - Unhandled Exception"
         crumb.level = SentryLevel.info
-        SentrySDK.addBreadcrumb(crumb: crumb)
+        SentrySDK.addBreadcrumb(crumb)
     
        //Index out of rang exception
        let listOfNumbers = [1, 2, 3]
