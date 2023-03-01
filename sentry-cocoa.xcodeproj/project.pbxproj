@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0781009529AF25DD00F05AF4 /* go.mod in Resources */ = {isa = PBXBuildFile; fileRef = 0781006129AF25DD00F05AF4 /* go.mod */; };
+		0781009629AF25DD00F05AF4 /* cgosample.go in Resources */ = {isa = PBXBuildFile; fileRef = 0781006229AF25DD00F05AF4 /* cgosample.go */; };
+		0781009729AF25DD00F05AF4 /* build.sh in Resources */ = {isa = PBXBuildFile; fileRef = 0781006329AF25DD00F05AF4 /* build.sh */; };
+		078100A329AF276900F05AF4 /* libcgosample.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078100A229AF276900F05AF4 /* libcgosample.xcframework */; };
+		078100A429AF276900F05AF4 /* libcgosample.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 078100A229AF276900F05AF4 /* libcgosample.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		50B18ACD242C40490090B96C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B18ACC242C40490090B96C /* AppDelegate.swift */; };
 		50B18ACF242C40490090B96C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B18ACE242C40490090B96C /* SceneDelegate.swift */; };
 		50B18AD1242C40490090B96C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B18AD0242C40490090B96C /* ViewController.swift */; };
@@ -16,7 +21,26 @@
 		6AEC7C6114473CA26725CAEE /* Pods_sentry_cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6EA5CEE501EB6C37FE298E6 /* Pods_sentry_cocoa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		078100A529AF276900F05AF4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				078100A429AF276900F05AF4 /* libcgosample.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0781006129AF25DD00F05AF4 /* go.mod */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = go.mod; sourceTree = "<group>"; };
+		0781006229AF25DD00F05AF4 /* cgosample.go */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cgosample.go; sourceTree = "<group>"; };
+		0781006329AF25DD00F05AF4 /* build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
+		078100A229AF276900F05AF4 /* libcgosample.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libcgosample.xcframework; path = libcgosample/build/frameworks/libcgosample.xcframework; sourceTree = "<group>"; };
+		078100A629AF2A2F00F05AF4 /* sentry-cocoa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sentry-cocoa-Bridging-Header.h"; sourceTree = "<group>"; };
 		252176612D0B71B07DF3782D /* Pods-sentry-cocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sentry-cocoa.release.xcconfig"; path = "Target Support Files/Pods-sentry-cocoa/Pods-sentry-cocoa.release.xcconfig"; sourceTree = "<group>"; };
 		3F8C098177257CAD2C47B821 /* Pods-sentry-cocoa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sentry-cocoa.debug.xcconfig"; path = "Target Support Files/Pods-sentry-cocoa/Pods-sentry-cocoa.debug.xcconfig"; sourceTree = "<group>"; };
 		50B18AC9242C40490090B96C /* sentry-cocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sentry-cocoa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,15 +60,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AEC7C6114473CA26725CAEE /* Pods_sentry_cocoa.framework in Frameworks */,
+				078100A329AF276900F05AF4 /* libcgosample.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0781006029AF25DD00F05AF4 /* libcgosample */ = {
+			isa = PBXGroup;
+			children = (
+				0781006129AF25DD00F05AF4 /* go.mod */,
+				0781006229AF25DD00F05AF4 /* cgosample.go */,
+				0781006329AF25DD00F05AF4 /* build.sh */,
+			);
+			path = libcgosample;
+			sourceTree = "<group>";
+		};
 		34A4F878E8627A12811B457B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				078100A229AF276900F05AF4 /* libcgosample.xcframework */,
 				B6EA5CEE501EB6C37FE298E6 /* Pods_sentry_cocoa.framework */,
 			);
 			name = Frameworks;
@@ -53,6 +89,7 @@
 		50B18AC0242C40490090B96C = {
 			isa = PBXGroup;
 			children = (
+				0781006029AF25DD00F05AF4 /* libcgosample */,
 				50B18ACB242C40490090B96C /* sentry-cocoa */,
 				50B18ACA242C40490090B96C /* Products */,
 				B853E19747B9C7541C92E8C1 /* Pods */,
@@ -78,6 +115,7 @@
 				50B18AD5242C404B0090B96C /* Assets.xcassets */,
 				50B18AD7242C404B0090B96C /* LaunchScreen.storyboard */,
 				50B18ADA242C404B0090B96C /* Info.plist */,
+				078100A629AF2A2F00F05AF4 /* sentry-cocoa-Bridging-Header.h */,
 			);
 			path = "sentry-cocoa";
 			sourceTree = "<group>";
@@ -99,11 +137,13 @@
 			buildConfigurationList = 50B18ADD242C404B0090B96C /* Build configuration list for PBXNativeTarget "sentry-cocoa" */;
 			buildPhases = (
 				AA16D1D9BE5062FE555BEBB2 /* [CP] Check Pods Manifest.lock */,
+				0781005A29AF255000F05AF4 /* Build libcgosample */,
 				50B18AC5242C40490090B96C /* Sources */,
 				50B18AC6242C40490090B96C /* Frameworks */,
 				50B18AC7242C40490090B96C /* Resources */,
 				799D4BCE6EB582F44C251E1D /* [CP] Embed Pods Frameworks */,
 				50132D44242EA4E600E56BE6 /* ShellScript */,
+				078100A529AF276900F05AF4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,13 +194,34 @@
 			files = (
 				50B18AD9242C404B0090B96C /* LaunchScreen.storyboard in Resources */,
 				50B18AD6242C404B0090B96C /* Assets.xcassets in Resources */,
+				0781009529AF25DD00F05AF4 /* go.mod in Resources */,
+				0781009729AF25DD00F05AF4 /* build.sh in Resources */,
 				50B18AD4242C40490090B96C /* Main.storyboard in Resources */,
+				0781009629AF25DD00F05AF4 /* cgosample.go in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0781005A29AF255000F05AF4 /* Build libcgosample */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build libcgosample";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PROJECT_DIR/libcgosample/build.sh\n";
+		};
 		50132D44242EA4E600E56BE6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,9 +445,21 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libcgosample/build/ios/arm64/lib",
+					"$(PROJECT_DIR)/libcgosample/build/tvos/arm64/lib",
+					"$(PROJECT_DIR)/libcgosample/build/macosx/arm64/lib",
+					"$(PROJECT_DIR)/libcgosample/build/macosx/x86_64/lib",
+					"$(PROJECT_DIR)/libcgosample/build/tvosim/arm64/lib",
+					"$(PROJECT_DIR)/libcgosample/build/tvosim/x86_64/lib",
+					"$(PROJECT_DIR)/libcgosample/build/iosim/arm64/lib",
+					"$(PROJECT_DIR)/libcgosample/build/iosim/x86_64/lib",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "sentry.sentry-cocoa";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/sentry-cocoa/sentry-cocoa-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -405,9 +478,21 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libcgosample/build/ios/arm64/lib",
+					"$(PROJECT_DIR)/libcgosample/build/tvos/arm64/lib",
+					"$(PROJECT_DIR)/libcgosample/build/macosx/arm64/lib",
+					"$(PROJECT_DIR)/libcgosample/build/macosx/x86_64/lib",
+					"$(PROJECT_DIR)/libcgosample/build/tvosim/arm64/lib",
+					"$(PROJECT_DIR)/libcgosample/build/tvosim/x86_64/lib",
+					"$(PROJECT_DIR)/libcgosample/build/iosim/arm64/lib",
+					"$(PROJECT_DIR)/libcgosample/build/iosim/x86_64/lib",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "sentry.sentry-cocoa";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/sentry-cocoa/sentry-cocoa-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

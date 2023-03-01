@@ -82,6 +82,15 @@ class ViewController: UIViewController {
        let listOfNumbers = [1, 2, 3]
        print(listOfNumbers[4])
    }
+  
+  @IBAction func causeCGOMainThreadBlock(_ sender: Any) {
+    let crumb = Breadcrumb()
+    crumb.message = "User clicked the button - cgo Block Main"
+    crumb.level = SentryLevel.info
+    SentrySDK.addBreadcrumb(crumb)
+
+    cgosample_a()
+  }
     
     func callMehtodThatThrowsError() throws{
         throw NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Handled Exception"])
